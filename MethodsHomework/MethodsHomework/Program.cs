@@ -29,6 +29,7 @@ namespace MethodsHomework
         static void Main(string[] args)
         {
             RunLab1();
+            RunLab2();
         }
         static void RunLab1()
         {
@@ -75,9 +76,13 @@ namespace MethodsHomework
 
     class Cat
     {
-        public Cat()
-        {
+        public string name;
+        public int age;
 
+        public Cat(string catName, int catAge)
+        {
+            name = catName;
+            age = catAge;
         }
     }
 
@@ -85,7 +90,7 @@ namespace MethodsHomework
     {
         public static void Age(Cat catObj)
         {
-
+            catObj.age += 5;
         }
     }
 }
