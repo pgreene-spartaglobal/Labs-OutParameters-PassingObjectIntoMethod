@@ -34,9 +34,9 @@ namespace MethodsHomework
             int productValue = 0;
             int sumValue = 0;
 
-            outParameters.ReadInputs(inputArray);
-            outParameters.CalculateProduct(inputArray[0], inputArray[1], inputArray[2], out sumValue);
-            outParameters.DisplayProduct();
+            inputArray = outParameters.ReadInputs(inputArray);
+            productValue = outParameters.CalculateProduct(inputArray[0], inputArray[1], inputArray[2], out sumValue);
+            outParameters.DisplayOutput(productValue, sumValue);
         }
 
 
@@ -60,9 +60,10 @@ namespace MethodsHomework
             return firstNumber * secondNumber * thirdNumber;
         }
 
-        public void DisplayProduct()
+        public void DisplayOutput(int product, int sum)
         {
-
+            Console.WriteLine(String.Format("Product: {0}", product));
+            Console.WriteLine(String.Format("Sum: {0}", sum));
         }
     }
 }
