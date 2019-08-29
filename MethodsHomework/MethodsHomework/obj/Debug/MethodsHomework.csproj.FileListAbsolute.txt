@@ -1,0 +1,7 @@
+C:\Users\Philip Greene\Engineering40\Week3\Day4\Labs-OutParameters-PassingObjectIntoMethod\MethodsHomework\MethodsHomework\bin\Debug\MethodsHomework.exe.config
+C:\Users\Philip Greene\Engineering40\Week3\Day4\Labs-OutParameters-PassingObjectIntoMethod\MethodsHomework\MethodsHomework\bin\Debug\MethodsHomework.exe
+C:\Users\Philip Greene\Engineering40\Week3\Day4\Labs-OutParameters-PassingObjectIntoMethod\MethodsHomework\MethodsHomework\bin\Debug\MethodsHomework.pdb
+C:\Users\Philip Greene\Engineering40\Week3\Day4\Labs-OutParameters-PassingObjectIntoMethod\MethodsHomework\MethodsHomework\obj\Debug\MethodsHomework.csprojAssemblyReference.cache
+C:\Users\Philip Greene\Engineering40\Week3\Day4\Labs-OutParameters-PassingObjectIntoMethod\MethodsHomework\MethodsHomework\obj\Debug\MethodsHomework.csproj.CoreCompileInputs.cache
+C:\Users\Philip Greene\Engineering40\Week3\Day4\Labs-OutParameters-PassingObjectIntoMethod\MethodsHomework\MethodsHomework\obj\Debug\MethodsHomework.exe
+C:\Users\Philip Greene\Engineering40\Week3\Day4\Labs-OutParameters-PassingObjectIntoMethod\MethodsHomework\MethodsHomework\obj\Debug\MethodsHomework.pdb
