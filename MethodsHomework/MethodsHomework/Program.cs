@@ -28,7 +28,7 @@ namespace MethodsHomework
     {
         static void Main(string[] args)
         {
-            RunLab1();
+            //RunLab1();
             RunLab2();
         }
         static void RunLab1()
@@ -45,7 +45,14 @@ namespace MethodsHomework
 
         static void RunLab2()
         {
+            Cat cat01 = new Cat("Tibby", 2);
+            Console.WriteLine(String.Format("Created cat01\ncat01.name: {0}\ncat01.age: {1}\n", cat01.name, cat01.age));
 
+            for (int i = 0; i < 2; i++)
+            {
+                Methods.Age(cat01);
+                Console.WriteLine(String.Format("Current age of {0}: {1}\n", cat01.name, cat01.age));
+            }
         }
     }
 
@@ -71,6 +78,7 @@ namespace MethodsHomework
         {
             Console.WriteLine(String.Format("Product: {0}", product));
             Console.WriteLine(String.Format("Sum: {0}", sum));
+            Console.WriteLine();
         }
     }
 
@@ -91,6 +99,7 @@ namespace MethodsHomework
         public static void Age(Cat catObj)
         {
             catObj.age += 5;
+            Console.WriteLine(String.Format("{0} aged 5 years...", catObj.name));
         }
     }
 }
