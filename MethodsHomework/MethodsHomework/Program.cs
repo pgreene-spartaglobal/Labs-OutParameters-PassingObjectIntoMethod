@@ -27,8 +27,7 @@ namespace MethodsHomework
     class Program
     {
         static void Main(string[] args)
-        {
-            
+        {            
             OutParameters outParameters = new OutParameters();
             int[] inputArray = new int[3];
             int productValue = 0;
@@ -65,5 +64,10 @@ namespace MethodsHomework
             Console.WriteLine(String.Format("Product: {0}", product));
             Console.WriteLine(String.Format("Sum: {0}", sum));
         }
+    }
+
+    class Cat
+    {
+
     }
 }
