@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 
 /* Lab 1 : Out parameters
  * Declare a method which inputs three integers and returns the product ie the value of the three numbers multiplied together. 
@@ -47,12 +48,14 @@ namespace MethodsHomework
         {
             Cat cat01 = new Cat("Tibby", 2);
             Console.WriteLine(String.Format("Created cat01\ncat01.name: {0}\ncat01.age: {1}\n", cat01.name, cat01.age));
-
+            
             for (int i = 0; i < 2; i++)
             {
                 Methods.Age(cat01);
                 Console.WriteLine(String.Format("Current age of {0}: {1}\n", cat01.name, cat01.age));
             }
+
+            Methods.DisplaySerializeCatJSON(cat01);
         }
     }
 
@@ -93,13 +96,19 @@ namespace MethodsHomework
             age = catAge;
         }
     }
-
     class Methods
     {
         public static void Age(Cat catObj)
         {
             catObj.age += 5;
             Console.WriteLine(String.Format("{0} aged 5 years...", catObj.name));
+        }
+
+        public static void DisplaySerializeCatJSON(Cat catObj)
+        {
+            Console.WriteLine("Serialized JSON string");
+            var json = new JavaScriptSerializer().Serialize(catObj);
+            Console.WriteLine(json);
         }
     }
 }
