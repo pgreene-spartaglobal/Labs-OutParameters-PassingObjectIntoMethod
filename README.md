@@ -16,16 +16,23 @@ A class named OutParameters was created which would contain all the required met
 * Read inputs from the user
 * Calculate the product by multiplying all inputs and out the sum value
 * Display the output
+
 An instance of OutParameters is created in the Program class 
 ### Lab 2
 To implement this lab two additional classes were created 
 * Cat
 * Methods
+
 Cat has properties of name and age. These are public so that instances of Cat can have their properties manipulated by other classes.
+
 Cat also has a constructor to pass in the name and the age during instantiation.
+
 In the Program class a For Loop is used to pass the cat instance into the Age method found in the Methods class multiple times.
+
 The Methods class has two methods
-*Age
-*DisplaySerializeCatJSON
+* Age
+* DisplaySerializeCatJSON
+
 To use the Age method a cat instance must be passed as an argument. Age increments the cats age property by 5.
+
 DisplaySerializeCatJSON serializes the cat instance and outputs the JSON string to console.
