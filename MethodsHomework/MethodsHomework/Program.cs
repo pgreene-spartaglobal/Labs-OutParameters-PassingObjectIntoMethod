@@ -29,40 +29,78 @@ namespace MethodsHomework
     {
         static void Main(string[] args)
         {
-            //RunLab1();
-            RunLab2();
+            Console.WriteLine("Philip Greene - pgreene@spartaglobal.com\nMethods Homework\n");
+            
+            // Loop labs
+            bool exit = false;
+            while (!exit)
+            {
+                Console.WriteLine("Please select which lab you would like to run\n1. Lab 1 : Out parameters\n2. Lab 2 : Passing an object into a method\n3. Exit");
+                int option = Convert.ToInt32(Console.ReadLine());
+                switch (option)
+                {
+                    case 1:
+                        RunLab1();
+                        break;
+                    case 2:
+                        RunLab2();
+                        break;
+                    case 3:
+                        exit = true;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid option - Please try again\n");
+                        break;
+                }
+            }
+            Console.ReadLine();
         }
+
         static void RunLab1()
         {
+            Console.WriteLine("\nLab 1\n");
+
+            // Declare and initialize variables
             OutParameters outParameters = new OutParameters();
             int[] inputArray = new int[3];
             int productValue = 0;
             int sumValue = 0;
 
+            // Read inputs from console and store in inputArray
             inputArray = outParameters.ReadInputs(inputArray);
+
+            // Calculate the product and sum 
             productValue = outParameters.CalculateProduct(inputArray[0], inputArray[1], inputArray[2], out sumValue);
+
+            // Display the product and sum
             outParameters.DisplayOutput(productValue, sumValue);
         }
 
         static void RunLab2()
         {
+            Console.WriteLine("\nLab 2\n");
+
+            // Create new instance of cat using constructor
             Cat cat01 = new Cat("Tibby", 2);
             Console.WriteLine(String.Format("Created cat01\ncat01.name: {0}\ncat01.age: {1}\n", cat01.name, cat01.age));
-            
+
+            // Pass the Cat instance into the Age() method twice
             for (int i = 0; i < 2; i++)
             {
                 Methods.Age(cat01);
                 Console.WriteLine(String.Format("Current age of {0}: {1}\n", cat01.name, cat01.age));
             }
 
+            // Serialize the cat01 into JSON
             Methods.DisplaySerializeCatJSON(cat01);
         }
     }
 
     class OutParameters
-    {     
+    {   
         public int[] ReadInputs(int[] inputValues)
         {
+            // Loop three times to populate all three elements of the integer array
             for (int i = 0; i < 3; i++)
             {
                 Console.WriteLine(String.Format("Please enter integer {0}:", i + 1));
@@ -90,6 +128,7 @@ namespace MethodsHomework
         public string name;
         public int age;
 
+        // Constructor
         public Cat(string catName, int catAge)
         {
             name = catName;
@@ -100,6 +139,7 @@ namespace MethodsHomework
     {
         public static void Age(Cat catObj)
         {
+            // Add 5 years to the instance of the cat
             catObj.age += 5;
             Console.WriteLine(String.Format("{0} aged 5 years...", catObj.name));
         }
@@ -109,6 +149,7 @@ namespace MethodsHomework
             Console.WriteLine("Serialized JSON string");
             var json = new JavaScriptSerializer().Serialize(catObj);
             Console.WriteLine(json);
+            Console.WriteLine();
         }
     }
 }
